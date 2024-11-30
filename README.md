@@ -1,0 +1,1 @@
+Este es un proyecto de seguridad que se va utilizar slidercam para monitorear y registrar fotos desde una conexión web inalámbrica y a largo plazo mediante una conexión LORA.
