@@ -1,0 +1,28 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXAMPLES_LORA_RX
+	tristate "Pico LoRa RX (SX1278 + SSD1306)"
+	default n
+	depends on SPI_DRIVER && I2C_DRIVER
+	---help---
+		Receptor LoRa 433 MHz con OLED SSD1306 128x32.
+		Portado del sketch Arduino equivalente.
+
+if EXAMPLES_LORA_RX
+
+config EXAMPLES_LORA_RX_PROGNAME
+	string "Program name"
+	default "lora_rx"
+
+config EXAMPLES_LORA_RX_PRIORITY
+	int "Task priority"
+	default 100
+
+config EXAMPLES_LORA_RX_STACKSIZE
+	int "Stack size"
+	default 4096
+
+endif
